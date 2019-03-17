@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+
+@ViewBag.Message 
+
+
+@using MVc_2.Models;
+
+@model LoginViewModel
+
+<br /><br />
+<div class="row">
+    <div class="col-lg-4">
+
+    </div>
+    <div class="text-center table-bordered col-lg-4" style="background-color:aliceblue;border-radius:25px;">
+        @using (Html.BeginForm("Login", "Home"))
+        {
+            <h2>Login</h2>
+            <div>Username</div>@Html.TextBoxFor(s => s.Username);<Br /><br />
+            <div>Password</div>@Html.TextBoxFor(s => s.Password);<Br /><br />
+            <div>Location</div>@Html.TextBoxFor(s => s.Location);<Br /><br />
+            <div>Name</div>@Html.TextBoxFor(s => s.Name);<Br /><br />
+            <input class="btn btn-success" id="Button1" type="submit" value="Login" />
+        }
+        <br />
+    </div>
+    <div class="col-lg-4">
+
+    </div>
+</div>
+
+

@@ -1,0 +1,41 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<h4>@ViewBag.Message</h4>
+<br/>
+                         <div class="text-center">
+                             <div class="btn btn-warning">
+                                 @Html.ActionLink("LOGIN", "Login")
+                             </div>
+                         </div>
+<br /><br />
+                         
+
+<form action="AddToCart">
+    <div style="font-size:x-large">
+
+        <div class="row text-center table-bordered">
+            <div class="col-md-4"><h2>Apple</h2>            <img src="~/Images/apple-icon.png" />           <br />@Html.ActionLink("Add", "AddToCart", new { id = 1, name = "Apple", price = 8 })<br /> $8.00</div>
+            <div class="col-md-4"><h2>Banana</h2>           <img src="~/Images/banana-icon.png" />          <br />@Html.ActionLink("Add", "AddToCart", new { id = 2, name = "Banana", price = 4 })<Br /> $4.00</div>
+            <div class="col-md-4"><h2>Cherry</h2>           <img src="~/Images/cherry-icon.png" />           <br />@Html.ActionLink("Add", "AddToCart", new { id = 3, name = "Cherry", price = 6 })<Br /> $6.00</div>
+        </div>
+        <div class="row text-center table-bordered">
+            <div class="col-md-4"><h2>Coconut</h2>          <img src="~/Images/coconut-icon.png" />          <br />@Html.ActionLink("Add", "AddToCart", new { id = 4, name = "Coconut", price = 10 })<Br /> $10.00</div>
+            <div class="col-md-4"><h2>Grape Fruit</h2>      <img src="~/Images/grapefruit-icon.png" />       <br />@Html.ActionLink("Add", "AddToCart", new { id = 5, name = "Grape Fruit", price = 2 })<Br /> $2.00</div>
+            <div class="col-md-4"><h2>Kiwi</h2>             <img src="~/Images/kiwi-icon.png" />             <br />@Html.ActionLink("Add", "AddToCart", new { id = 6, name = "Kiwi", price = 1 })<Br /> $1.00</div>
+        </div>
+        <div class="row text-center table-bordered">
+            <div class="col-md-4"><h2>Orange</h2>           <img src="~/Images/lemon-icon.png" />            <br />@Html.ActionLink("Add", "AddToCart", new { id = 7, name = "Orange", price = 3 })<Br /> $3.00</div>
+            <div class="col-md-4"><h2>Star Fruit</h2>       <img src="~/Images/starfruit-icon.png" />        <br />@Html.ActionLink("Add", "AddToCart", new { id = 8, name = "Starfruit", price = 2 })<Br /> $2.00</div>
+            <div class="col-md-4"><h2>Maracuja</h2>         <img src="~/Images/maracuja-icon.png" />         <br />@Html.ActionLink("Add", "AddToCart", new { id = 9, name = "Maracuja", price = 8 })<Br /> $8.00</div>
+        </div>
+        <div class="row text-center table-bordered">
+            <div class="col-md-4"><h2>Strawberyy</h2>       <img src="~/Images/strawberry-icon.png" />       <br />@Html.ActionLink("Add", "AddToCart", new { id = 10, name = "Starwberry", price = 3 })<Br /> $3.00</div>
+            <div class="col-md-4"><h2>Watermelon</h2>       <img src="~/Images/watermelon-icon.png" />       <br />@Html.ActionLink("Add", "AddToCart", new { id = 11, name = "Watermelon", price = 11 })<Br /> $11.00</div>
+            <div class="col-md-4"><h2>Yellow Watermelon</h2><img src="~/Images/yellow-watermelon-icon.png" /><br />@Html.ActionLink("Add", "AddToCart", new { id = 12, name = "Yellow Watermelon", price = 12 })<Br /> $12.00</div>
+        </div>
+    </div>
+</form>
+
+

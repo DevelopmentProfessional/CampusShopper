@@ -4,12 +4,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
 
-
-namespace MVc_2.Controllers
-{
+namespace MVc_2.Controllers{
     public class HomeController : Controller
     {
         SnacksDB db = new SnacksDB();
+        
         public ActionResult Index()
         {
             return View();
@@ -21,7 +20,6 @@ namespace MVc_2.Controllers
             {
                 if (Session["Permission"].ToString() == "Admin")
                 {
-
                     return View(db.Invoices.ToList());
                 }
                 else
@@ -32,7 +30,7 @@ namespace MVc_2.Controllers
             }
             catch (NullReferenceException)
             {
-                ViewBag.MEssage = "Invalid Request";
+                ViewBag.Message = "Invalid Request";
                 return View("Index");
             }
            

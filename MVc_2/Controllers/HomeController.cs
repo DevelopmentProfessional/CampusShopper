@@ -35,7 +35,7 @@ namespace MVc_2.Controllers{
             }
            
         }
-        
+            
         public ActionResult AddToInvoice()
         {
             db.Invoices.Add(new Invoice {

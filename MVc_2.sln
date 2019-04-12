@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28010.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC_2", "MVc_2\MVC_2.csproj", "{5D2C9D2C-76E8-4AE5-A58B-4979EA6AA258}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityTestOnlineStore", "UnityTestOnlineStore\UnityTestOnlineStore.csproj", "{AC91EF1B-BF19-47C8-9398-16CA10078E1C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{5D2C9D2C-76E8-4AE5-A58B-4979EA6AA258}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D2C9D2C-76E8-4AE5-A58B-4979EA6AA258}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D2C9D2C-76E8-4AE5-A58B-4979EA6AA258}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC91EF1B-BF19-47C8-9398-16CA10078E1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC91EF1B-BF19-47C8-9398-16CA10078E1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC91EF1B-BF19-47C8-9398-16CA10078E1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC91EF1B-BF19-47C8-9398-16CA10078E1C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

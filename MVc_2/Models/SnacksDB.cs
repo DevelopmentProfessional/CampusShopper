@@ -67,5 +67,10 @@ namespace MVc_2.Models
                 .Property(e => e.name)
                 .IsUnicode(false);
         }
+
+        internal static SnacksDB Create()
+        {
+            return new SnacksDB();
+        }
     }
 }

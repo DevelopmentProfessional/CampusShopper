@@ -1,16 +1,22 @@
-﻿using MVc_2.Models;
+﻿using MVc_2.Data;
+using MVc_2.Models;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web.Mvc;
 
 namespace MVc_2.Controllers{
     public class HomeController : Controller
     {
-        SnacksDB db = new SnacksDB();
-        
+        public static SnacksDB db;
+        public static DataAccess da;
+               
         public ActionResult Index()
         {
+            if (db == null){db = new FactorySettings().CreateSnacks();}
+            if (da == null){da = new FactorySettings().CreateDataAccess();}
+
             return View();
         }
         
@@ -20,6 +26,7 @@ namespace MVc_2.Controllers{
             {
                 if (Session["Permission"].ToString() == "Admin")
                 {
+                    
                     return View(db.Invoices.ToList());
                 }
                 else
@@ -112,15 +119,18 @@ namespace MVc_2.Controllers{
                
                 try
                 {
-                    db.SnackLists.Add(new SnackList
-                    {
-                        AccountID = Session["Username"].ToString(),
-                        SnackID = ID.ToString(),
-                        InvoiceID = Session["InvoiceID"].ToString(),
-                        name = Name,
-                        price = Price                    
-                    });
-                    db.SaveChanges();
+                    //db.SnackLists.Add(new SnackList
+                    //{
+                    //    AccountID = Session["Username"].ToString(),
+                    //    SnackID = ID.ToString(),
+                    //    InvoiceID = Session["InvoiceID"].ToString(),
+                    //    name = Name,
+                    //    price = Price                    
+                    //});
+                    //db.SaveChanges();
+
+                    da.AddToCart(Convert.ToInt32(Name), Convert.ToInt32(Name));                    
+
                     ViewBag.Message = "Your item has been added to the cart.";
 
                     return View("Index");
@@ -151,7 +161,7 @@ namespace MVc_2.Controllers{
                 }
                 else
                 {
-                    SnacksDB User = new SnacksDB();
+                    SnacksDB User = SnacksDB.Create();
                     Account account = User.Accounts.Find(Convert.ToInt32(Username));
                     if (account != null)
                     {

@@ -18,8 +18,8 @@
 
     @foreach (var item in Model)
     {
+        
         <tr>
-
             <td>
                 @Html.DisplayFor(modelItem => item.name)
             </td>
@@ -33,6 +33,7 @@
     }
 
 </table>
+
 
 <form action="AddToInvoice">
         <input class="btn btn-success" type="submit" value="Check Out" />

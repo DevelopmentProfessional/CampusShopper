@@ -152,7 +152,9 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Contracts\FactoryRepository.cs" />
     <Compile Include="Contracts\IRepository.cs" />
+    <Compile Include="Controllers\FactorySettings.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Data\DataAccess.cs" />
     <Compile Include="Global.asax.cs">
@@ -190,6 +192,7 @@
     <Content Include="Images\yellow-watermelon-icon.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />

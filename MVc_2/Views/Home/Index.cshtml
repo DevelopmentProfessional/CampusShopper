@@ -1,23 +1,24 @@
-﻿@{
-    ViewBag.Title = "Home Page";
-}
+﻿@{ViewBag.Title = "Home Page";}
 
+    
 <h4>@ViewBag.Message</h4>
+     
+
 <br/>
-                         <div class="text-center">
-                             <div class="btn btn-warning">
-                                 @Html.ActionLink("LOGIN", "Login")
-                             </div>
-                         </div>
-<br /><br />
-                         
+    <div class="text-center">
+        <div class="btn btn-warning">
+            @Html.ActionLink("LOGIN", "Login")
+        </div>
+    </div>
+<br />
+<br />
+
 
 <form action="AddToCart">
     <div style="font-size:x-large">
-
         <div class="row text-center table-bordered">
-            <div class="col-md-4"><h2>Apple</h2>            <img src="~/Images/apple-icon.png" />           <br />@Html.ActionLink("Add", "AddToCart", new { id = 1, name = "Apple", price = 8 })<br /> $8.00</div>
-            <div class="col-md-4"><h2>Banana</h2>           <img src="~/Images/banana-icon.png" />          <br />@Html.ActionLink("Add", "AddToCart", new { id = 2, name = "Banana", price = 4 })<Br /> $4.00</div>
+            <div class="col-md-4"><h2>Apple</h2>            <img src="~/Images/apple-icon.png" />            <br />@Html.ActionLink("Add", "AddToCart", new { id = 1, name = "Apple", price = 8 })<br /> $8.00</div>
+            <div class="col-md-4"><h2>Banana</h2>           <img src="~/Images/banana-icon.png" />           <br />@Html.ActionLink("Add", "AddToCart", new { id = 2, name = "Banana", price = 4 })<Br /> $4.00</div>
             <div class="col-md-4"><h2>Cherry</h2>           <img src="~/Images/cherry-icon.png" />           <br />@Html.ActionLink("Add", "AddToCart", new { id = 3, name = "Cherry", price = 6 })<Br /> $6.00</div>
         </div>
         <div class="row text-center table-bordered">

@@ -119,17 +119,17 @@ namespace MVc_2.Controllers{
                
                 try
                 {
-                    //db.SnackLists.Add(new SnackList
-                    //{
-                    //    AccountID = Session["Username"].ToString(),
-                    //    SnackID = ID.ToString(),
-                    //    InvoiceID = Session["InvoiceID"].ToString(),
-                    //    name = Name,
-                    //    price = Price                    
-                    //});
-                    //db.SaveChanges();
+                    db.SnackLists.Add(new SnackList
+                    {
+                        AccountID = Session["Username"].ToString(),
+                        SnackID = ID.ToString(),
+                        InvoiceID = Session["InvoiceID"].ToString(),
+                        name = Name,
+                        price = Price
+                    });
+                    db.SaveChanges();
 
-                    da.AddToCart(Convert.ToInt32(Name), Convert.ToInt32(Name));                    
+                    //  da.AddToCart(Convert.ToInt32(Name), Convert.ToInt32(Name));                    
 
                     ViewBag.Message = "Your item has been added to the cart.";
 
